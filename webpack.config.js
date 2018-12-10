@@ -9,7 +9,8 @@ module.exports = {
     entry: './main.jsx',
     output: {
         filename: 'bundle.js',
-        path: __dirname + '/public'
+        path: __dirname + '/public',
+        publicPath: '/'
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -22,7 +23,8 @@ module.exports = {
                     '^/api': ''
                 }
             }
-        }
+        },
+        historyApiFallback: true
     },
     resolve: {
         extensions: ['.js', '.jsx'],
