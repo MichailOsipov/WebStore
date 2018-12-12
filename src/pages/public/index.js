@@ -1,1 +1,1 @@
-export {PublicRoute} from './public-route';
+export {createPublicRoute} from './public-route';
