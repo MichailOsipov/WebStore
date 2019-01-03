@@ -1,6 +1,9 @@
 import {concatUrls} from 'utils/concat-urls';
 
 export const makeGoTo = (path, push) => ({
+    mainPage: () => {
+        push(path);
+    },
     registration: () => {
         push(concatUrls(path, 'registration'));
     },

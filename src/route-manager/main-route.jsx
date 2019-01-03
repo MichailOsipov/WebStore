@@ -1,14 +1,18 @@
 import * as React from 'react';
 import {Switch, Route} from 'react-router-dom';
-import {createPublicRoute} from 'pages/public';
-import {AdminPage} from 'pages/admin';
+import {createPublicRoute} from 'routes/public';
+import {AdminPage} from 'routes/admin';
+import {Modals} from 'components/modals';
 
 export const MainRoute = () => (
-    <Switch>
-        {createPublicRoute('/')}
-        <Route
-            path="/admin"
-            component={AdminPage}
-        />
-    </Switch>
+    <div>
+        <Switch>
+            {createPublicRoute('/')}
+            <Route
+                path="/admin"
+                component={AdminPage}
+            />
+        </Switch>
+        <Modals />
+    </div>
 );
