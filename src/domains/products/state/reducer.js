@@ -2,14 +2,16 @@ import {
     SET_PRODUCTS,
     SET_PRODUCT_INFO,
     SET_PRODUCTS_ADDED_TO_CART,
-    SET_ORDERS
+    SET_ORDERS,
+    SET_ALL_ORDERS
 } from './actions';
 
 const DEFAULT_STATE = {
     products: [],
     productInfo: {},
     productsAddedToCart: [],
-    orders: []
+    orders: [],
+    allOrders: []
 };
 
 export const productsReducer = (state = DEFAULT_STATE, action) => {
@@ -36,6 +38,12 @@ export const productsReducer = (state = DEFAULT_STATE, action) => {
             return {
                 ...state,
                 orders: action.payload.orders
+            };
+        }
+        case SET_ALL_ORDERS: {
+            return {
+                ...state,
+                allOrders: action.payload.orders
             };
         }
         default:

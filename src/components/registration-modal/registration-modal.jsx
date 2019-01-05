@@ -16,7 +16,7 @@ export const RegistrationModal = connect(
     const {goTo} = params;
     return (
         <div>
-            RegistrationModal
+            Регистрация
             <RegistrationModalForm />
             <button onClick={() => register().then(goTo.mainPage)}>Зарегистрироваться</button>
             <button onClick={goTo.mainPage}>Назад</button>

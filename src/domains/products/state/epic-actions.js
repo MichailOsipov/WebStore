@@ -3,7 +3,8 @@ import {
     setProducts,
     setProductInfo,
     setProductsAddedToCart,
-    setOrders
+    setOrders,
+    setAllOrders
 } from './actions';
 
 export const fetchProducts = () => dispatch =>
@@ -39,4 +40,13 @@ export const fetchOrders = () => dispatch =>
     ProductsApi.loadOrders()
         .then((orders) => {
             dispatch(setOrders({orders}));
+        });
+
+export const createProduct = ({name, description}) => () =>
+    ProductsApi.createProduct({name, description});
+
+export const fetchAllOrders = () => dispatch =>
+    ProductsApi.loadAllOrders()
+        .then((orders) => {
+            dispatch(setAllOrders({orders}));
         });

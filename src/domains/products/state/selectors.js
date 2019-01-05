@@ -23,3 +23,8 @@ export const getOrders = createSelector(
     getProductsDomain,
     ({orders}) => orders
 );
+
+export const getAllOrders = createSelector(
+    getProductsDomain,
+    ({allOrders}) => allOrders
+);

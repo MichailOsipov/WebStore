@@ -26,11 +26,11 @@ export const ProductInformation = connect(
             const {id} = productInfo || {};
             return (
                 <div>
-                    ProductInformation
+                    Информация о товаре:
                     <ProductInfoView productInfo={productInfo} />
                     <button onClick={() => addProductToCart(id)}>Добавить продукт в корзину</button>
                     <button onClick={params.goTo.shoppingCart}>Перейти в корзину</button>
-                    <button onClick={params.goTo.mainPage}>Назад</button>
+                    <button onClick={params.goTo.mainPage}>На главную</button>
                 </div>
             );
         }

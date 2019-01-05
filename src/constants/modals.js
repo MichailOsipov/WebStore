@@ -3,6 +3,7 @@ import {LOGIN_MODAL_NAME, LoginModal} from 'components/login-modal';
 import {PRODUCT_INFORMATION_MODAL_NAME, ProductInformation} from 'components/product-information-modal';
 import {SHOPPING_CART_MODAL_NAME, ShoppingCartModal} from 'components/shopping-cart-modal';
 import {ORDERS_MODAL_NAME, Orders} from 'components/orders-modal';
+import {ADMIN_MODAL_NAME, AdminModal} from 'components/admin-modal';
 
 export const MODALS = {
     [REGISTRATION_MODAL_NAME]: {
@@ -27,6 +28,11 @@ export const MODALS = {
     },
     [ORDERS_MODAL_NAME]: {
         Component: Orders,
+        size: 'large',
+        position: 'right'
+    },
+    [ADMIN_MODAL_NAME]: {
+        Component: AdminModal,
         size: 'large',
         position: 'right'
     }

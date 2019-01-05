@@ -18,5 +18,8 @@ export const makeGoTo = (path, push) => ({
     },
     orders: () => {
         push(concatUrls(path, 'orders'));
+    },
+    admin: () => {
+        push(concatUrls(path, 'admin'));
     }
 });

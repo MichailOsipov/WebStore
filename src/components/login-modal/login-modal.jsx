@@ -16,7 +16,7 @@ export const LoginModal = connect(
     const {goTo} = params;
     return (
         <div>
-            LoginModal
+            Авторизация
             <LoginModalForm />
             <button onClick={() => makeLogin().then(goTo.mainPage)}>Логин</button>
             <button onClick={goTo.mainPage}>Назад</button>

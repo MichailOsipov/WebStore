@@ -13,13 +13,13 @@ export const PublicPage = connect(
     logout
 }) => (
     <div>
-        PublicPage, it will be everywhere
-        <button onClick={() => goTo.registration()}>To registration</button>
-        <button onClick={() => goTo.login()}>To login</button>
-        <button onClick={() => logout()}>Logout</button>
-        <button onClick={() => goTo.productInformation(5)}>To productInformation</button>
-        <button onClick={() => goTo.shoppingCart()}>To shoppingCart</button>
-        <button onClick={() => goTo.orders()}>To orders</button>
+        Главная страница
+        <button onClick={goTo.registration}>Зарегистрироваться</button>
+        <button onClick={goTo.login}>Авторизоваться</button>
+        <button onClick={logout}>Выход</button>
+        <button onClick={goTo.shoppingCart}>Корзина</button>
+        <button onClick={goTo.orders}>Заказы</button>
+        <button onClick={goTo.admin}>Страница администратора</button>
         <Products onOpenProductInformation={goTo.productInformation} />
     </div>
 ));
