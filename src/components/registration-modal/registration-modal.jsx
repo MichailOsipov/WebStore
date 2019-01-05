@@ -5,20 +5,21 @@ import {register} from './epic-actions';
 
 export const RegistrationModal = connect(
     null,
-    dispatch => ({
-        register: () => dispatch(register())
-    })
+    {
+        register
+    }
 )(({
     params,
     register
 }) => {
+    // didmount if authorised - gotomainpage
     const {goTo} = params;
     return (
         <div>
             RegistrationModal
             <RegistrationModalForm />
             <button onClick={() => register().then(goTo.mainPage)}>Зарегистрироваться</button>
-            <button onClick={() => goTo.mainPage()}>Назад</button>
+            <button onClick={goTo.mainPage}>Назад</button>
         </div>
     );
 });

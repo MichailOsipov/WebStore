@@ -1,4 +1,8 @@
-import {SET_NAME, SET_AUTHORIZED_STATUS} from './actions';
+import {
+    SET_NAME,
+    SET_AUTHORIZED_STATUS,
+    SET_ROLE
+} from './actions';
 
 const DEFAULT_STATE = {
     authorized: false
@@ -15,6 +19,11 @@ export const userReducer = (state = DEFAULT_STATE, action) => {
             return {
                 ...state,
                 authorized: action.payload.status
+            };
+        case SET_ROLE:
+            return {
+                ...state,
+                role: action.payload.role
             };
         default:
             return state;

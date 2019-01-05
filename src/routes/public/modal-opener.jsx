@@ -31,10 +31,10 @@ const handleScreenOrEntityIdChange = (props, prevProps) => {
 export const ModalOpener = flowRight([
     connect(
         null,
-        dispatch => ({
-            showModal: ({name, params}) => dispatch(showModal({name, params})),
-            closeModal: ({name}) => dispatch(closeModal({name}))
-        })
+        {
+            showModal,
+            closeModal
+        }
     ),
     onChange(
         ['screenType'],
