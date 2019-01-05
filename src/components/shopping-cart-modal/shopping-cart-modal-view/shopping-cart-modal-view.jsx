@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
+import {Button, Typography} from '@material-ui/core';
 import {ProductItem} from './product-item';
 
 export const ShoppingCartModalView = ({
@@ -9,7 +9,7 @@ export const ShoppingCartModalView = ({
     onGoMainPage
 }) => (
     <div>
-        Корзина
+        <Typography variant="h6">Корзина</Typography>
         {productsAddedToCart.map(({id, name}) => (
             <ProductItem
                 key={id}

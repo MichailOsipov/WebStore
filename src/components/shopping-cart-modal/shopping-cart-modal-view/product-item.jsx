@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
+import {Button} from '@material-ui/core';
 
 export const ProductItem = ({name, onRemoveItem}) => (
     <div>

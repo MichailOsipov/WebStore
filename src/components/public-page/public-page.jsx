@@ -13,7 +13,6 @@ export const PublicPage = connect(
     logout
 }) => (
     <div>
-        Главная страница
         <button onClick={goTo.registration}>Зарегистрироваться</button>
         <button onClick={goTo.login}>Авторизоваться</button>
         <button onClick={logout}>Выход</button>

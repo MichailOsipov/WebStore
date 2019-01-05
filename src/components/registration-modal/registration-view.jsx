@@ -1,10 +1,10 @@
 import * as React from 'react';
-import Button from '@material-ui/core/Button';
+import {Button, Typography} from '@material-ui/core';
 import {RegistrationModalForm} from './registration-modal-form';
 
 export const RegistrationView = ({onRegister, onGoMainPage}) => (
     <div>
-        Регистрация
+        <Typography variant="h6">Регистрация</Typography>
         <RegistrationModalForm />
         <Button variant="contained" onClick={onRegister}>Зарегистрироваться</Button>
         <Button onClick={onGoMainPage}>Назад</Button>
