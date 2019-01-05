@@ -14,5 +14,6 @@ export const ProductsApi = {
     loadOrders: () => Promise.resolve(MOCK_ORDERS),
     // admin
     createProduct: ({name, description}) => Promise.resolve(),
-    loadAllOrders: () => Promise.resolve(MOCK_ALL_ORDERS)
+    loadAllOrders: () => Promise.resolve(MOCK_ALL_ORDERS),
+    confirmOrder: orderId => Promise.resolve()
 };

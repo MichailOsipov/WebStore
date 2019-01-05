@@ -50,3 +50,9 @@ export const fetchAllOrders = () => dispatch =>
         .then((orders) => {
             dispatch(setAllOrders({orders}));
         });
+
+export const confirmOrder = orderId => dispatch =>
+    ProductsApi.confirmOrder(orderId)
+        .then(() => {
+            dispatch(fetchAllOrders());
+        });

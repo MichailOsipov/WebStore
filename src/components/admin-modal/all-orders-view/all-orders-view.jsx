@@ -1,12 +1,12 @@
 import * as React from 'react';
 import {Orders} from './orders';
 
-export const AllOrdersView = ({allOrders}) => (
+export const AllOrdersView = ({allOrders, confirmOrder}) => (
     <div>
         {allOrders.map(({user, orders}) => (
             <div key={user}>
                 <div>{user}</div>
-                <Orders orders={orders} /><br />
+                <Orders orders={orders} confirmOrder={confirmOrder} /><br />
             </div>
         ))}
     </div>

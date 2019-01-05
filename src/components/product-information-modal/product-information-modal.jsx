@@ -25,13 +25,12 @@ export const ProductInformation = connect(
             } = this.props;
             const {id} = productInfo || {};
             return (
-                <div>
-                    Информация о товаре:
-                    <ProductInfoView productInfo={productInfo} />
-                    <button onClick={() => addProductToCart(id)}>Добавить продукт в корзину</button>
-                    <button onClick={params.goTo.shoppingCart}>Перейти в корзину</button>
-                    <button onClick={params.goTo.mainPage}>На главную</button>
-                </div>
+                <ProductInfoView
+                    productInfo={productInfo}
+                    onGoShoppingCart={params.goTo.shoppingCart}
+                    onAddProductToCart={() => addProductToCart(id)}
+                    onGoMainPage={params.goTo.mainPage}
+                />
             );
         }
     }

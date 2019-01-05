@@ -19,11 +19,10 @@ export const Orders = connect(
         render() {
             const {orders, params} = this.props;
             return (
-                <div>
-                    Заказы
-                    <OrdersView orders={orders} />
-                    <button onClick={params.goTo.mainPage}>На главную</button>
-                </div>
+                <OrdersView
+                    orders={orders}
+                    onGoMainPage={params.goTo.mainPage}
+                />
             );
         }
     }

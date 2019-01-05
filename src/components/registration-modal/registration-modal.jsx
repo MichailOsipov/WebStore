@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
-import {RegistrationModalForm} from './registration-modal-form';
 import {register} from './epic-actions';
+import {RegistrationView} from './registration-view';
 
 export const RegistrationModal = connect(
     null,
@@ -15,11 +15,9 @@ export const RegistrationModal = connect(
     // didmount if authorised - gotomainpage
     const {goTo} = params;
     return (
-        <div>
-            Регистрация
-            <RegistrationModalForm />
-            <button onClick={() => register().then(goTo.mainPage)}>Зарегистрироваться</button>
-            <button onClick={goTo.mainPage}>Назад</button>
-        </div>
+        <RegistrationView
+            onRegister={() => register().then(goTo.mainPage)}
+            onGoMainPage={goTo.mainPage}
+        />
     );
 });

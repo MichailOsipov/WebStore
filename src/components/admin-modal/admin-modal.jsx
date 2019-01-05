@@ -1,9 +1,12 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
-import {fetchAllOrders, getAllOrders} from 'domains/products/state';
+import {
+    fetchAllOrders,
+    getAllOrders,
+    confirmOrder
+} from 'domains/products/state';
 import {createNewProduct} from './epic-actions';
-import {CreateProductForm} from './create-product-form';
-import {AllOrdersView} from './all-orders-view';
+import {AdminView} from './admin-view';
 
 export const AdminModal = connect(
     state => ({
@@ -11,7 +14,8 @@ export const AdminModal = connect(
     }),
     {
         createNewProduct,
-        fetchAllOrders
+        fetchAllOrders,
+        confirmOrder
     }
 )(
     class extends React.Component {
@@ -20,14 +24,20 @@ export const AdminModal = connect(
         }
 
         render() {
-            const {createNewProduct, allOrders} = this.props;
+            const {
+                createNewProduct,
+                confirmOrder,
+                allOrders,
+                params
+            } = this.props;
+            const {goTo} = params;
             return (
-                <div>
-                    <div>Страница администратора</div>
-                    <CreateProductForm />
-                    <button onClick={createNewProduct}>Создать новый товар</button>
-                    <AllOrdersView allOrders={allOrders} />
-                </div>
+                <AdminView
+                    createNewProduct={createNewProduct}
+                    allOrders={allOrders}
+                    onGoMainPage={goTo.mainPage}
+                    confirmOrder={confirmOrder}
+                />
             );
         }
     }

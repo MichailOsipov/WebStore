@@ -31,15 +31,12 @@ export const ShoppingCartModal = connect(
                 params
             } = this.props;
             return (
-                <div>
-                    Корзина
-                    <ShoppingCartModalView
-                        productsAddedToCart={productsAddedToCart}
-                        removeProductFromCart={removeProductFromCart}
-                    />
-                    <button onClick={makeAnOrder}>Сделать заказ</button>
-                    <button onClick={params.goTo.mainPage}>На главную</button>
-                </div>
+                <ShoppingCartModalView
+                    makeAnOrder={makeAnOrder}
+                    productsAddedToCart={productsAddedToCart}
+                    removeProductFromCart={removeProductFromCart}
+                    onGoMainPage={params.goTo.mainPage}
+                />
             );
         }
     }

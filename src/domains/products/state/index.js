@@ -7,7 +7,8 @@ export {
     makeAnOrder,
     fetchOrders,
     createProduct,
-    fetchAllOrders
+    fetchAllOrders,
+    confirmOrder
 } from './epic-actions';
 export {productsReducer} from './reducer';
 export {

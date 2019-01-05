@@ -1,8 +1,9 @@
 import * as React from 'react';
+import Button from '@material-ui/core/Button';
 
 export const ProductItem = ({name, onRemoveItem}) => (
     <div>
         {name}
-        <button onClick={onRemoveItem}>Удалить</button>
+        <Button variant="contained" onClick={onRemoveItem}>Удалить</Button>
     </div>
 );
