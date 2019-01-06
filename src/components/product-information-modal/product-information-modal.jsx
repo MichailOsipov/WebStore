@@ -28,7 +28,7 @@ export const ProductInformation = connect(
                 <ProductInfoView
                     productInfo={productInfo}
                     onGoShoppingCart={params.goTo.shoppingCart}
-                    onAddProductToCart={() => addProductToCart(id)}
+                    onAddProductToCart={() => addProductToCart(id).then(params.goTo.mainPage)}
                     onGoMainPage={params.goTo.mainPage}
                 />
             );
