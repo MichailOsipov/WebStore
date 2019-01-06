@@ -10,10 +10,11 @@ export const ShoppingCartModalView = ({
 }) => (
     <div>
         <Typography variant="h6">Корзина</Typography>
-        {productsAddedToCart.map(({id, name}) => (
+        {productsAddedToCart.map(({id, name, imageSrc}) => (
             <ProductItem
                 key={id}
                 name={name}
+                imageSrc={imageSrc}
                 onRemoveItem={() => removeProductFromCart(id)}
             />
         ))}

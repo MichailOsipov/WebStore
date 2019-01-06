@@ -1,24 +1,45 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
-import {logout} from 'domains/user/state';
+import {AppBar, Typography, Button} from '@material-ui/core';
+import {logout, getAuthorizedStatus} from 'domains/user/state';
 import {Products} from './products';
 
 export const PublicPage = connect(
-    null,
+    state => ({
+        authorizedStatus: getAuthorizedStatus(state)
+    }),
     {
         logout
     }
 )(({
     goTo,
-    logout
+    logout,
+    authorizedStatus
 }) => (
     <div>
-        <button onClick={goTo.registration}>Зарегистрироваться</button>
-        <button onClick={goTo.login}>Авторизоваться</button>
-        <button onClick={logout}>Выход</button>
-        <button onClick={goTo.shoppingCart}>Корзина</button>
-        <button onClick={goTo.orders}>Заказы</button>
-        <button onClick={goTo.admin}>Страница администратора</button>
+        <AppBar position="static" color="default" style={{flexDirection: 'row'}}>
+            <Typography variant="h6" color="inherit" >
+                WebStorage
+            </Typography>
+            <div>
+                <Button color="inherit" onClick={goTo.shoppingCart}>Корзина</Button>
+                <Button color="inherit" onClick={goTo.orders}>Заказы</Button>
+                {/* rolecheck */}
+                <Button color="inherit" onClick={goTo.admin}>Страница администратора</Button>
+            </div>
+            <div style={{flexGrow: 1}} />
+            {authorizedStatus
+                ? (
+                    <Button color="inherit" onClick={logout}>Выход</Button>
+                )
+                : (
+                    <div>
+                        <Button color="inherit" onClick={goTo.registration}>Зарегистрироваться</Button>
+                        <Button color="inherit" onClick={goTo.login}>Авторизоваться</Button>
+                    </div>
+                )
+            }
+        </AppBar>
         <Products onOpenProductInformation={goTo.productInformation} />
     </div>
 ));

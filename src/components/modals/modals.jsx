@@ -14,9 +14,9 @@ export const Modals = connect(
 }) => (
     <div>
         {modals.map(({name, params}) => {
-            const {Component, size, position} = MODALS[name];
+            const {Component, size, type} = MODALS[name];
             return (
-                <ModalView key={name} size={size} position={position}>
+                <ModalView key={name} size={size} type={type}>
                     <Component params={params} />
                 </ModalView>
             );

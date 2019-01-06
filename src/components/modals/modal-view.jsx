@@ -1,42 +1,47 @@
 import * as React from 'react';
-import Modal from '@material-ui/core/Modal';
+import {Drawer, Dialog} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles';
 
 const styles = theme => ({
     modal: {
         backgroundColor: theme.palette.background.paper,
-        boxShadow: theme.shadows[5],
-        padding: theme.spacing.unit * 4,
-        position: 'absolute'
+        padding: theme.spacing.unit * 4
     },
     large: {
         width: theme.spacing.unit * 100
     },
     small: {
         width: theme.spacing.unit * 50
-    },
-    center: {
-        top: '30%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)'
-    },
-    right: {
-        right: 0
     }
 });
 
-const getModalClassName = classes => ({size, position}) =>
-    `${classes.modal} ${classes[size]} ${classes[position]}`;
+const CenterDialog = ({children}) => (
+    <Dialog open>
+        {children}
+    </Dialog>
+);
+
+const RightDrawer = ({children}) => (
+    <Drawer anchor="right" open>
+        {children}
+    </Drawer>
+);
+
+const getModalClassName = classes => ({size}) =>
+    `${classes.modal} ${classes[size]}`;
 
 export const ModalView = withStyles(styles)(({
     children,
     size = 'small',
-    position = 'center',
+    type = 'drawer',
     classes
-}) => (
-    <Modal open>
-        <div className={getModalClassName(classes)({size, position})}>
-            {children}
-        </div>
-    </Modal>
-));
+}) => {
+    const WindowComponent = type === 'drawer' ? RightDrawer : CenterDialog;
+    return (
+        <WindowComponent>
+            <div className={getModalClassName(classes)({size})}>
+                {children}
+            </div>
+        </WindowComponent>
+    );
+});

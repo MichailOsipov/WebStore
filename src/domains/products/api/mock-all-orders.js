@@ -7,11 +7,13 @@ export const MOCK_ALL_ORDERS = [
                 products: [
                     {
                         id: 4,
-                        name: 'Автомобиль'
+                        name: 'Автомобиль',
+                        imageSrc: 'https://media.tvzvezda.ru/news/vstrane_i_mire/content/201811191113-bhlk.htm/1.jpg'
                     },
                     {
                         id: 5,
-                        name: 'Холодильник'
+                        name: 'Холодильник',
+                        imageSrc: 'https://50.img.avito.st/640x480/3764525250.jpg'
                     }
                 ]
             },
@@ -20,7 +22,8 @@ export const MOCK_ALL_ORDERS = [
                 products: [
                     {
                         id: 6,
-                        name: 'Лопата'
+                        name: 'Лопата',
+                        imageSrc: 'https://zs-rus.ru/wp-content/uploads/2017/08/fcb45dbfbd1acf04a8965f251d76d573-1.jpg'
                     }
                 ]
             }
@@ -34,7 +37,8 @@ export const MOCK_ALL_ORDERS = [
                 products: [
                     {
                         id: 7,
-                        name: 'Стол'
+                        name: 'Стол',
+                        imageSrc: 'https://www.nv-lab.ru/images/upload/editor5036.jpg'
                     }
                 ]
             }

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {connect} from 'react-redux';
+import {Typography} from '@material-ui/core';
 import {getProducts, fetchProducts} from 'domains/products/state';
 import {ProductItem} from './product-item';
 
@@ -20,12 +21,12 @@ export const Products = connect(
             const {onOpenProductInformation, products} = this.props;
             return (
                 <div>
-                    Products:
-                    {products.map(({id, name}) => (
+                    <Typography variant="h6">Товары в наличии:</Typography>
+                    {products.map(({id, name, imageSrc}) => (
                         <ProductItem
                             key={id}
-                            id={id}
                             name={name}
+                            imageSrc={imageSrc}
                             onOpenProductInformation={() => onOpenProductInformation(id)}
                         />
                     ))}

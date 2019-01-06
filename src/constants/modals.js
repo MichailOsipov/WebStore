@@ -9,31 +9,31 @@ export const MODALS = {
     [REGISTRATION_MODAL_NAME]: {
         Component: RegistrationModal,
         size: 'small',
-        position: 'center'
+        type: 'dialog'
     },
     [LOGIN_MODAL_NAME]: {
         Component: LoginModal,
         size: 'small',
-        position: 'center'
+        type: 'dialog'
     },
     [PRODUCT_INFORMATION_MODAL_NAME]: {
         Component: ProductInformation,
         size: 'large',
-        position: 'right'
+        type: 'drawer'
     },
     [SHOPPING_CART_MODAL_NAME]: {
         Component: ShoppingCartModal,
         size: 'large',
-        position: 'right'
+        type: 'drawer'
     },
     [ORDERS_MODAL_NAME]: {
         Component: Orders,
         size: 'large',
-        position: 'right'
+        type: 'drawer'
     },
     [ADMIN_MODAL_NAME]: {
         Component: AdminModal,
         size: 'large',
-        position: 'right'
+        type: 'drawer'
     }
 };
