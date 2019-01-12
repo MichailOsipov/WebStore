@@ -26,9 +26,8 @@ export const Products = connect(
                     </Grid>
                     <Grid container spacing={16} justify="center">
                         {products.map(({id, name, imageSrc}) => (
-                            <Grid item xs={2}>
+                            <Grid item xs={2} key={id}>
                                 <ProductItem
-                                    key={id}
                                     name={name}
                                     imageSrc={imageSrc}
                                     onOpenProductInformation={() => onOpenProductInformation(id)}

@@ -13,8 +13,8 @@ export const OrdersView = ({orders, onGoMainPage}) => (
         <Grid item>
             <Grid container direction="column" spacing={40}>
                 {orders.map(({id, products}) => (
-                    <Grid item>
-                        <OrderItem key={id} products={products} />
+                    <Grid item key={id}>
+                        <OrderItem products={products} />
                     </Grid>
                 ))}
             </Grid>

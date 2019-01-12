@@ -15,9 +15,8 @@ export const ShoppingCartModalView = ({
         <Grid item>
             <Grid container spacing={16}>
                 {productsAddedToCart.map(({id, name, imageSrc}) => (
-                    <Grid item xs={3}>
+                    <Grid key={id} item xs={3}>
                         <ProductItem
-                            key={id}
                             name={name}
                             imageSrc={imageSrc}
                             onRemoveItem={() => removeProductFromCart(id)}

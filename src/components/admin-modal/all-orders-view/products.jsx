@@ -5,9 +5,8 @@ import {ProductCard} from 'components/product-card';
 export const Products = ({products}) => (
     <Grid container spacing={16}>
         {products.map(({id, name, imageSrc}) => (
-            <Grid item xs={3}>
+            <Grid item xs={3} key={id}>
                 <ProductCard
-                    key={id}
                     name={name}
                     imageSrc={imageSrc}
                 />

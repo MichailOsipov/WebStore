@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingCartModalView rendering 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Typography)
+      variant="h5"
+    >
+      Корзина
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        key="1"
+        xs={3}
+      >
+        <ProductItem
+          imageSrc="imagesrc-car"
+          name="car"
+          onRemoveItem={[Function]}
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        key="2"
+        xs={3}
+      >
+        <ProductItem
+          imageSrc="imagesrc-table"
+          name="table"
+          onRemoveItem={[Function]}
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+      variant="contained"
+    >
+      Сделать заказ
+    </WithStyles(Button)>
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+    >
+      На главную
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
