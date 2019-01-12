@@ -1,14 +1,20 @@
 import * as React from 'react';
-import {Button} from '@material-ui/core';
+import {Button, Grid} from '@material-ui/core';
 import {Products} from './products';
 
 export const Orders = ({orders, confirmOrder}) => (
-    <div>
+    <Grid container direction="column" spacing={40}>
         {orders.map(({id, products}) => (
-            <div key={id}>
-                <Products products={products} />
-                <Button onClick={() => confirmOrder(id)} variant="contained">Подтвердить</Button>
-            </div>
+            <Grid item key={id}>
+                <Grid container direction="column" spacing={16}>
+                    <Grid item>
+                        <Products products={products} />
+                    </Grid>
+                    <Grid item>
+                        <Button onClick={() => confirmOrder(id)} variant="contained">Подтвердить</Button>
+                    </Grid>
+                </Grid>
+            </Grid>
         ))}
-    </div>
+    </Grid>
 );

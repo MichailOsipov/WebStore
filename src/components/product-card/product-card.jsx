@@ -9,7 +9,7 @@ import {
 } from '@material-ui/core';
 
 export const ProductCard = ({name, imageSrc, actions}) => (
-    <Card style={{maxWidth: 345}}>
+    <Card>
         <CardActionArea>
             <CardMedia
                 style={{height: 140}}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Button, Typography} from '@material-ui/core';
+import {Grid, Button, Typography} from '@material-ui/core';
 import {ProductItem} from './product-item';
 
 export const ShoppingCartModalView = ({
@@ -8,17 +8,27 @@ export const ShoppingCartModalView = ({
     removeProductFromCart,
     onGoMainPage
 }) => (
-    <div>
-        <Typography variant="h6">Корзина</Typography>
-        {productsAddedToCart.map(({id, name, imageSrc}) => (
-            <ProductItem
-                key={id}
-                name={name}
-                imageSrc={imageSrc}
-                onRemoveItem={() => removeProductFromCart(id)}
-            />
-        ))}
-        <Button variant="contained" onClick={makeAnOrder}>Сделать заказ</Button>
-        <Button onClick={onGoMainPage}>На главную</Button>
-    </div>
+    <Grid container spacing={16} direction="column">
+        <Grid item>
+            <Typography variant="h5">Корзина</Typography>
+        </Grid>
+        <Grid item>
+            <Grid container spacing={16}>
+                {productsAddedToCart.map(({id, name, imageSrc}) => (
+                    <Grid item xs={3}>
+                        <ProductItem
+                            key={id}
+                            name={name}
+                            imageSrc={imageSrc}
+                            onRemoveItem={() => removeProductFromCart(id)}
+                        />
+                    </Grid>
+                ))}
+            </Grid>
+        </Grid>
+        <Grid item>
+            <Button variant="contained" onClick={makeAnOrder}>Сделать заказ</Button>
+            <Button onClick={onGoMainPage}>На главную</Button>
+        </Grid>
+    </Grid>
 );
