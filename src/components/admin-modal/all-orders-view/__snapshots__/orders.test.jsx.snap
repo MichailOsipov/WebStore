@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Orders rendering 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+  spacing={40}
+>
+  <WithStyles(Grid)
+    item={true}
+    key="3"
+  >
+    <WithStyles(Grid)
+      container={true}
+      direction="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Products
+          products={
+            Array [
+              Object {
+                "id": 4,
+                "imageSrc": "https://media.tvzvezda.ru/news/vstrane_i_mire/content/201811191113-bhlk.htm/1.jpg",
+                "name": "Автомобиль",
+              },
+              Object {
+                "id": 5,
+                "imageSrc": "https://50.img.avito.st/640x480/3764525250.jpg",
+                "name": "Холодильник",
+              },
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          onClick={[Function]}
+          variant="contained"
+        >
+          Подтвердить
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="4"
+  >
+    <WithStyles(Grid)
+      container={true}
+      direction="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Products
+          products={
+            Array [
+              Object {
+                "id": 6,
+                "imageSrc": "https://zs-rus.ru/wp-content/uploads/2017/08/fcb45dbfbd1acf04a8965f251d76d573-1.jpg",
+                "name": "Лопата",
+              },
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Button)
+          onClick={[Function]}
+          variant="contained"
+        >
+          Подтвердить
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

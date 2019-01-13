@@ -8,3 +8,8 @@ export const getAuthorizedStatus = createSelector(
     getUserDomain,
     ({authorized}) => authorized
 );
+
+export const getUserName = createSelector(
+    getUserDomain,
+    ({name}) => name
+);

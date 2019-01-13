@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrdersView rendering 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Typography)
+      variant="h6"
+    >
+      Заказы
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+    >
+      На главную
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Grid)
+      container={true}
+      direction="column"
+      spacing={40}
+    >
+      <WithStyles(Grid)
+        item={true}
+        key="3"
+      >
+        <OrderItem
+          products={
+            Array [
+              Object {
+                "id": 5,
+                "imageSrc": "https://images1.popmeh.ru/upload/img_cache/9e6/9e663df2539446f6c910e19e382dd38f_ce_1838x980x80x258_cropped_800x427.jpg",
+                "name": "Автомобиль",
+              },
+              Object {
+                "id": 6,
+                "imageSrc": "https://50.img.avito.st/640x480/3764525250.jpg",
+                "name": "Холодильник",
+              },
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        key="4"
+      >
+        <OrderItem
+          products={
+            Array [
+              Object {
+                "id": 7,
+                "imageSrc": "https://hoff.ru/upload/iblock/3aa/3aa235b98de3e501252e3d78eeb7f6b4.jpg",
+                "name": "Кровать",
+              },
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

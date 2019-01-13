@@ -3,6 +3,7 @@ import {AppBar, Typography, Button, Grid} from '@material-ui/core';
 
 export const Header = ({
     authorizedStatus,
+    name,
     goTo,
     logout
 }) => (
@@ -18,7 +19,6 @@ export const Header = ({
                     <Grid item>
                         <Button color="inherit" onClick={goTo.shoppingCart}>Корзина</Button>
                         <Button color="inherit" onClick={goTo.orders}>Заказы</Button>
-                        {/* rolecheck */}
                         <Button color="inherit" onClick={goTo.admin}>Страница администратора</Button>
                     </Grid>
                 </Grid>
@@ -26,7 +26,14 @@ export const Header = ({
             <Grid item>
                 {authorizedStatus
                     ? (
-                        <Button color="inherit" onClick={logout}>Выход</Button>
+                        <Grid container direction="row" alignItems="center">
+                            <Grid item>
+                                <Typography variant="subtitle1">{`Добро пожаловать, ${name}`}</Typography>
+                            </Grid>
+                            <Grid item>
+                                <Button color="inherit" onClick={logout}>Выход</Button>
+                            </Grid>
+                        </Grid>
                     )
                     : (
                         <React.Fragment>

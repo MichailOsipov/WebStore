@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard rendering 1`] = `
+<WithStyles(Card)>
+  <WithStyles(CardActionArea)>
+    <WithStyles(CardMedia)
+      image="imageSrc"
+      style={
+        Object {
+          "height": 140,
+        }
+      }
+      title="product-name"
+    />
+    <WithStyles(CardContent)>
+      <WithStyles(Typography)
+        component="h2"
+        variant="h5"
+      >
+        name
+      </WithStyles(Typography)>
+    </WithStyles(CardContent)>
+  </WithStyles(CardActionArea)>
+  <WithStyles(CardActions)>
+    <div>
+      Actions
+    </div>
+  </WithStyles(CardActions)>
+</WithStyles(Card)>
+`;

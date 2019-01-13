@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AllOrdersView rendering 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    key="Андрей"
+  >
+    <WithStyles(Grid)
+      container={true}
+      direction="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Typography)
+          variant="h6"
+        >
+          Андрей
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Orders
+          confirmOrder={[MockFunction]}
+          orders={
+            Array [
+              Object {
+                "id": 3,
+                "products": Array [
+                  Object {
+                    "id": 4,
+                    "imageSrc": "https://media.tvzvezda.ru/news/vstrane_i_mire/content/201811191113-bhlk.htm/1.jpg",
+                    "name": "Автомобиль",
+                  },
+                  Object {
+                    "id": 5,
+                    "imageSrc": "https://50.img.avito.st/640x480/3764525250.jpg",
+                    "name": "Холодильник",
+                  },
+                ],
+              },
+              Object {
+                "id": 4,
+                "products": Array [
+                  Object {
+                    "id": 6,
+                    "imageSrc": "https://zs-rus.ru/wp-content/uploads/2017/08/fcb45dbfbd1acf04a8965f251d76d573-1.jpg",
+                    "name": "Лопата",
+                  },
+                ],
+              },
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="Никита"
+  >
+    <WithStyles(Grid)
+      container={true}
+      direction="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+      >
+        <WithStyles(Typography)
+          variant="h6"
+        >
+          Никита
+        </WithStyles(Typography)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+      >
+        <Orders
+          confirmOrder={[MockFunction]}
+          orders={
+            Array [
+              Object {
+                "id": 5,
+                "products": Array [
+                  Object {
+                    "id": 7,
+                    "imageSrc": "https://www.nv-lab.ru/images/upload/editor5036.jpg",
+                    "name": "Стол",
+                  },
+                ],
+              },
+            ]
+          }
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

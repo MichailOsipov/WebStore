@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductInfoView rendering 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Typography)
+      variant="h5"
+    >
+      Информация о товаре:
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Card)>
+      <WithStyles(CardActionArea)>
+        <WithStyles(CardMedia)
+          image="456"
+          style={
+            Object {
+              "height": 300,
+            }
+          }
+          title="product-123"
+        />
+        <WithStyles(CardContent)>
+          <WithStyles(Typography)
+            component="h2"
+            variant="h5"
+          >
+            123
+          </WithStyles(Typography)>
+          <WithStyles(Typography)
+            component="p"
+          >
+            345
+          </WithStyles(Typography)>
+        </WithStyles(CardContent)>
+      </WithStyles(CardActionArea)>
+      <WithStyles(CardActions)>
+        <WithStyles(Button)
+          color="primary"
+          onClick={[MockFunction]}
+        >
+          Добавить продукт в корзину
+        </WithStyles(Button)>
+      </WithStyles(CardActions)>
+    </WithStyles(Card)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+      variant="contained"
+    >
+      Перейти в корзину
+    </WithStyles(Button)>
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+    >
+      На главную
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginView rendering 1`] = `
+<WithStyles(Grid)
+  container={true}
+  direction="column"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Typography)
+      variant="h6"
+    >
+      Авторизация
+    </WithStyles(Typography)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <ReduxForm />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+  >
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+      variant="contained"
+    >
+      Логин
+    </WithStyles(Button)>
+    <WithStyles(Button)
+      onClick={[MockFunction]}
+    >
+      Назад
+    </WithStyles(Button)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

@@ -15,14 +15,14 @@ const styles = theme => ({
     }
 });
 
-const CenterDialog = ({children}) => (
-    <Dialog open>
+const CenterDialog = ({onClose, children}) => (
+    <Dialog open onClose={onClose}>
         {children}
     </Dialog>
 );
 
-const RightDrawer = ({children}) => (
-    <Drawer anchor="right" open>
+const RightDrawer = ({onClose, children}) => (
+    <Drawer anchor="right" open onClose={onClose}>
         {children}
     </Drawer>
 );
@@ -34,11 +34,12 @@ export const ModalView = withStyles(styles)(({
     children,
     size = 'small',
     type = 'drawer',
+    onClose,
     classes
 }) => {
     const WindowComponent = type === 'drawer' ? RightDrawer : CenterDialog;
     return (
-        <WindowComponent>
+        <WindowComponent onClose={onClose}>
             <div className={getModalClassName(classes)({size})}>
                 {children}
             </div>

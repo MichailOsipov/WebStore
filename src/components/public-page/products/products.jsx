@@ -20,11 +20,11 @@ export const Products = connect(
         render() {
             const {onOpenProductInformation, products} = this.props;
             return (
-                <Grid container justify="center" spacing={40}>
+                <Grid container justify="center">
                     <Grid item>
                         <Typography variant="h6">Товары в наличии:</Typography>
                     </Grid>
-                    <Grid container spacing={16} justify="center">
+                    <Grid container justify="center">
                         {products.map(({id, name, imageSrc}) => (
                             <Grid item xs={2} key={id}>
                                 <ProductItem

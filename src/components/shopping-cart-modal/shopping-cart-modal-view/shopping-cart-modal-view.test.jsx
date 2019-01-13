@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {shallow} from 'enzyme';
+import {MOCK_PRODUCTS_ADDED_TO_CART} from 'domains/products/api';
 import {ShoppingCartModalView} from './shopping-cart-modal-view';
 
 describe('ShoppingCartModalView', () => (
@@ -7,18 +8,7 @@ describe('ShoppingCartModalView', () => (
         const wrapper = shallow(
             <ShoppingCartModalView
                 makeAnOrder={jest.fn()}
-                productsAddedToCart={[
-                    {
-                        id: 1,
-                        name: 'car',
-                        imageSrc: 'imagesrc-car'
-                    },
-                    {
-                        id: 2,
-                        name: 'table',
-                        imageSrc: 'imagesrc-table'
-                    }
-                ]}
+                productsAddedToCart={MOCK_PRODUCTS_ADDED_TO_CART}
                 removeProductFromCart={jest.fn()}
                 onGoMainPage={jest.fn()}
             />
